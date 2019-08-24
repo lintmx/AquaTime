@@ -1,0 +1,120 @@
+:root {
+    --backgroud-color: rgba(233, 233, 233, 1);
+    --font-color: rgba(0, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroud-color: rgba(30, 30, 30, 1);
+        --font-color: rgba(100, 100, 100, 1);
+    }
+}
+
+@font-face {
+    font-family: MajorMonoDisplay-Regular;
+    src: url('/font/MajorMonoDisplay-Regular.ttf');
+}
+
+body {
+    margin: 0;
+    background-color: var(--backgroud-color);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container>div {
+    text-align: center;
+}
+
+.logo>svg {
+    width: 12vw;
+    animation: transform 5s linear 0s infinite forwards;
+    stroke: white;
+}
+
+.logo>svg>g>path {
+    stroke: var(--font-color);
+}
+
+.time>span {
+    font-size: 12vw;
+    color: var(--font-color);
+    font-family: 'MajorMonoDisplay-Regular'
+}
+
+.rua {
+    margin-top: 10vh;
+}
+
+.rua>span {
+    font-size: 2vw;
+    color: var(--font-color)
+}
+
+.settings {
+    position: fixed;
+    bottom: 1vh;
+    right: 1vw;
+}
+
+.settings>svg {
+    stroke: var(--font-color);
+    fill: var(--font-color);
+    fill-opacity: 0.1;
+    stroke-opacity: 0.1;
+    width: 2vw;
+    cursor: pointer;
+}
+
+@keyframes transform {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: center 25%;
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: center 25%;
+        transform-origin: center 25%;
+        transform: rotate(0deg);
+    }
+
+    25% {
+        -webkit-transform: rotate(25deg);
+        -webkit-transform-origin: center 25%;
+        -ms-transform: rotate(25deg);
+        -ms-transform-origin: center 25%;
+        transform-origin: center 25%;
+        transform: rotate(25deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: center 25%;
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: center 25%;
+        transform-origin: center 25%;
+        transform: rotate(0deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(-25deg);
+        -webkit-transform-origin: center 25%;
+        -ms-transform: rotate(-25deg);
+        -ms-transform-origin: center 25%;
+        transform-origin: center 25%;
+        transform: rotate(-25deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: center 25%;
+        -ms-transform: rotate(0deg);
+        -ms-transform-origin: center 25%;
+        transform-origin: center 25%;
+        transform: rotate(0deg);
+    }
+}

@@ -1,0 +1,88 @@
+:root {
+    --backgroud-color: rgba(233, 233, 233, 1);
+    --textarea-color: rgba(242, 242, 242, 1);
+    --hover-color: rgba(250, 250, 250, 1);
+    --font-color: rgba(0, 0, 0, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --backgroud-color: rgba(30, 30, 30, 1);
+        --textarea-color: rgb(50, 50, 50);
+        --hover-color: rgba(60, 60, 60, 1);
+        --font-color: rgba(100, 100, 100, 1);
+    }
+}
+
+body {
+    margin: 0;
+    background-color: var(--backgroud-color);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container>div {
+    text-align: center;
+}
+
+.logo>svg {
+    position: relative;
+    bottom: 10vh;
+    width: 12vw;
+    animation: transform 5s linear 0s infinite forwards;
+    stroke: white;
+}
+
+.logo>svg>g>path {
+    stroke: var(--font-color);
+}
+
+.editor>textarea {
+    resize: none;
+    background-color: var(--textarea-color);
+    border-radius: 0.5rem;
+    font-size: 2vh;
+    color: var(--font-color);
+}
+
+.editor>textarea::-webkit-input-placeholder {
+    color: var(--font-color);
+    opacity: 0.5;
+}
+
+.editor>textarea::-mos-input-placeholder {
+    color: var(--font-color);
+    opacity: 0.5;
+}
+
+.editor>textarea::-ms-input-placeholder {
+    color: var(--font-color);
+    opacity: 0.5;
+}
+
+.button {
+    margin-top: 5vh;
+}
+
+.button>button {
+    background-color: var(--textarea-color);
+    border: none;
+    color: var(--font-color);
+    padding: 1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+
+.button>button:hover {
+    background-color: var(--hover-color);
+}
